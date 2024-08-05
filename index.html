@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Konversi dan Pembayaran</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="loginSection">
+        <input type="text" id="whitelistInput" placeholder="Masukkan kata kunci">
+        <button id="whitelistButton">Masuk</button>
+    </div>
+
+    <div id="mainContent" style="display: none;">
+        <!-- Konversi TXT ke VCF -->
+        <div id="txtToVcfBox">
+            <h2>Konversi TXT ke VCF</h2>
+            <input type="file" id="txtFileInput">
+            <textarea id="fileContent" placeholder="Isi file teks akan tampil di sini"></textarea>
+            <input type="text" id="convertFileNameInput" placeholder="Nama file output">
+            <input type="text" id="contactNameInput" placeholder="Nama kontak">
+            <button id="convertButton">Konversi ke VCF</button>
+            <div id="convertedTxtToVcfFiles"></div>
+        </div>
+
+        <!-- Konversi VCF ke TXT -->
+        <div id="vcfToTxtBox">
+            <h2>Konversi VCF ke TXT</h2>
+            <input type="file" id="vcfToTxtFileInput">
+            <button id="vcfToTxtButton">Konversi ke TXT</button>
+            <div id="convertedVcfToTxtFiles"></div>
+        </div>
+
+        <!-- Pecah File VCF -->
+        <div id="splitVcfBox">
+            <h2>Pecah File VCF</h2>
+            <input type="file" id="vcfFileInput">
+            <input type="number" id="contactsPerFile" placeholder="Kontak per file">
+            <input type="text" id="splitFileNameInput" placeholder="Nama file output">
+            <button id="splitButton">Pecah File</button>
+            <div id="splitVcfFiles"></div>
+        </div>
+
+        <!-- Gabungkan File TXT -->
+        <div id="mergeTxtBox">
+            <h2>Gabungkan File TXT</h2>
+            <input type="file" id="txtFilesInput" multiple>
+            <input type="text" id="mergedFileNameInput" placeholder="Nama file output">
+            <button id="mergeButton">Gabungkan</button>
+            <div id="mergedTxtFiles"></div>
+        </div>
+
+        <!-- Laporan Aktivitas -->
+        <div id="reportBox">
+            <h2>Laporan Aktivitas</h2>
+            <textarea id="reportContent" readonly></textarea>
+        </div>
+
+        <!-- Verifikasi Pembayaran -->
+        <div id="paymentBox">
+            <h2>Verifikasi Pembayaran</h2>
+            <input type="number" id="paymentAmount" placeholder="Jumlah Pembayaran (IDR)">
+            <input type="text" id="transactionId" placeholder="ID Transaksi">
+            <button id="validatePaymentButton">Validasi Pembayaran</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
